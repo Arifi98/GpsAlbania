@@ -13,5 +13,14 @@ namespace GpsTirana
         {
 
         }
+
+        protected void Unnamed_ServerClick(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GetGender()
+        {
+        }
     }
 }

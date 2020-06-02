@@ -5,11 +5,11 @@
 
 <head>
     <!-- Required meta tags-->
-    <meta charset="UTF-8">
+   <%-- <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Colorlib Templates">
     <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+    <meta name="keywords" content="Colorlib Templates">--%>
 
     <!-- Title Page-->
     <title>GPS Albania</title>
@@ -42,18 +42,18 @@
                         <h2 class="title">Rregjistro klient te ri</h2>
                     </span>
 
-                    <form>
+                    <form runat="server">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Emer Klienti</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <input class="input--style-4" type="text" id="emer" runat="server">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Atesia e klientit</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <input class="input--style-4" type="text" id="atesia" runat="server">
                                 </div>
                             </div>
                         </div>
@@ -61,13 +61,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Mbiemri i sherbimit</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <input class="input--style-4" type="text" id="mbiemri" runat="server">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">ID karte</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <input class="input--style-4" type="text" name="idkarte" runat="server">
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                                 <div class="input-group">
                                     <label class="label">Data e Lindjes</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                        <input class="input--style-4 js-datepicker" type="text" id="birthday" runat="server">
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -87,12 +87,12 @@
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">
                                             M
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" value="M"  id="gjinia" runat="server"  onselect="GetGender()">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">
                                             F
-                                            <input type="radio" name="gender">
+                                            <input type="radio" id="gjiniaa" runat="server" value="F" checked="true">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -105,13 +105,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="email" id="email" runat="server">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="text" id="phone" runat="server">
                                 </div>
                             </div>
                         </div>
@@ -119,13 +119,13 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Adresa</label>
-                                    <input class="input--style-4" type="email" name="email">
+                                    <input class="input--style-4" type="text" id="adresa">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Numer Kontrate</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                                    <input class="input--style-4" type="text" id="kontrata" runat="server">
                                 </div>
                             </div>
                         </div>
@@ -142,7 +142,7 @@
                             </div>
                         </div>--%>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue asdf" type="submit">Save</button>
+                            <button class="btn btn--radius-2 btn--blue asdf" type="submit" runat="server" onserverclick="Unnamed_ServerClick" >Save</button>
                             <%--<button class="btn btn--radius-2 btn--blue  asdf" type="submit">Save and Send to mail</button>--%>
                         </div>
                     </form>
