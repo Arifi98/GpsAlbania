@@ -31,7 +31,7 @@ namespace GpsTirana
             if (Convert.ToInt32(rol) == 1)
             {
                 Session["name"] = username;
-                Response.Redirect("admin.aspx");
+                Response.Redirect("admintable.aspx");
             }
             if (Convert.ToInt32(rol) == 2)
             {

@@ -13,8 +13,8 @@ namespace GpsTirana
 
 
 
-      
-       
+
+
         public SqlConnection strcon = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString);
         public SqlCommand cmd = new SqlCommand();
         public SqlDataAdapter da = new SqlDataAdapter();
@@ -28,6 +28,36 @@ namespace GpsTirana
         public string msgedit;
         public string sql;
         public string msg;
+
+
+
+
+
+
+        public bool insert(string query)
+        {
+            try
+            {
+                strcon.Open();
+
+                cmd = new SqlCommand();
+                cmd.Connection = strcon;
+                cmd.CommandText = query;
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+                throw ex;
+            }
+            finally
+            {
+                strcon.Close();
+            }
+        }
+
 
         public void SaveUpdate(string sqlselect, string sqladd, string msgadd, string sqledit, string msgedit)
         {
@@ -190,10 +220,10 @@ namespace GpsTirana
             {
                 return resulti;
             }
-           
-               
-                
-            
+
+
+
+
         }
 
 
@@ -301,158 +331,6 @@ namespace GpsTirana
             }
         }
 
-        //public void ResponsiveDtg(DataGridView dtg)
-        //{
-        //    dtg.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-        //}
-
-        //public void dtgcolor(DataGridView dtg, int value)
-        //{
-        //    try
-        //    {
-
-        //        //DataGridViewRow rw = new DataGridViewRow();
-        //        dtg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-        //        foreach (DataGridViewColumn c in dtg.Columns)
-        //        {
-        //            c.SortMode = DataGridViewColumnSortMode.Programmatic;
-        //        }
-
-        //        foreach (DataGridViewRow rw in dtg.Rows)
-        //        {
-        //            if (Convert.ToInt32(rw.Cells[value].Value) < 10)
-        //            {
-        //                rw.DefaultCellStyle.BackColor = Color.Red;
-        //                rw.DefaultCellStyle.SelectionBackColor = Color.Red;
-        //                rw.DefaultCellStyle.ForeColor = Color.White;
-        //            }
-        //            // If rw.Cells(value).Value < 20 Then
-        //            //        rw.DefaultCellStyle.BackColor = Color.Red
-        //            //        rw.DefaultCellStyle.SelectionBackColor = Color.Red
-        //            //        rw.DefaultCellStyle.SelectionForeColor = Color.White
-        //            //    ElseIf rw.Cells(value).Value > 20 And rw.Cells(value).Value < 50 Then
-        //            //        rw.DefaultCellStyle.BackColor = Color.Orange
-        //            //        rw.DefaultCellStyle.SelectionBackColor = Color.Orange
-        //            //        rw.DefaultCellStyle.SelectionForeColor = Color.White
-        //            //    ElseIf rw.Cells(value).Value > 50 Then
-        //            //        rw.DefaultCellStyle.BackColor = Color.Blue
-        //            //        rw.DefaultCellStyle.SelectionBackColor = Color.Blue
-        //            //        rw.DefaultCellStyle.SelectionForeColor = Color.White
-        //            //    End If
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        //MessageBox.Show(ex.Message);
-        //    }
-
-        //    //dtg.RowHeadersVisible = False
-        //    //dtg.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-
-        //    //For Each c As DataGridViewColumn In dtg.Columns
-        //    //    c.SortMode = DataGridViewColumnSortMode.Programmatic
-        //    //Next
-
-
-        //    //For Each rw In dtg.Rows
-        //    //    If rw.Cells(value).Value < 20 Then
-        //    //        rw.DefaultCellStyle.BackColor = Color.Red
-        //    //        rw.DefaultCellStyle.SelectionBackColor = Color.Red
-        //    //        rw.DefaultCellStyle.SelectionForeColor = Color.White
-        //    //    ElseIf rw.Cells(value).Value > 20 And rw.Cells(value).Value < 50 Then
-        //    //        rw.DefaultCellStyle.BackColor = Color.Orange
-        //    //        rw.DefaultCellStyle.SelectionBackColor = Color.Orange
-        //    //        rw.DefaultCellStyle.SelectionForeColor = Color.White
-        //    //    ElseIf rw.Cells(value).Value > 50 Then
-        //    //        rw.DefaultCellStyle.BackColor = Color.Blue
-        //    //        rw.DefaultCellStyle.SelectionBackColor = Color.Blue
-        //    //        rw.DefaultCellStyle.SelectionForeColor = Color.White
-        //    //    End If
-        //    //Next
-
-
-
-
-        //}
-        //public void reports(string sql, string rptname, object  crystalRpt)
-        //{
-        //    try
-        //    {
-        //        strcon.Open();
-        //        string reportname;
-
-
-        //        cmd = new SqlCommand();
-        //        cmd.Connection = strcon;
-        //        cmd.CommandText = sqlselect;
-        //        da = new SqlDataAdapter();
-        //        da.SelectCommand = cmd;
-        //        dt = new DataTable();
-        //        da.Fill(dt);
-
-        //        reportname = rptname;
-        //        CrystalDecisions.CrystalReports.Engine.ReportDocument reportdoc;
-
-        //        string strReportPath;
-
-        //        strReportPath = Application.StartupPath + "\\report\\"  + reportname + ".rpt";
-
-
-        //       reportdoc.Load(strReportPath);
-        //       reportdoc.SetDataSource(dt);
-
-        //        //crystalRpt.ShowRefreshButton = false;
-        //        // crystalRpt.ShowCloseButton = false;
-        //        // crystalRpt.ShowGroupTreeButton = false;
-        //         crystalRpt.ReportSource = reportdoc;
-
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-        //    finally
-        //    {
-        //        da.Dispose();
-        //        strcon.Close();
-        //    }
-        //}
-
-        //  Public Sub reports(ByVal sql As String, ByVal rptname As String, ByVal crystalRpt As Object)
-        //    Try
-        //        con.Open()
-
-        //        Dim reportname As String
-        //        With cmd
-        //            .Connection = con
-        //            .CommandText = sql
-        //        End With
-        //        ds = New DataSet
-        //        da = New MySqlDataAdapter(sql, con)
-        //        da.Fill(ds)
-
-        //        reportname = rptname
-        //        Dim reportdoc As New CrystalDecisions.CrystalReports.Engine.ReportDocument
-        //        Dim strReportPath As String
-        //        strReportPath = Application.StartupPath & "\report\" & reportname & ".rpt"
-        //        With reportdoc
-        //            .Load(strReportPath)
-        //            .SetDataSource(ds.Tables(0))
-        //        End With
-        //        With crystalRpt
-        //            .ShowRefreshButton = False
-        //            .ShowCloseButton = False
-        //            .ShowGroupTreeButton = False
-        //            .ReportSource = reportdoc
-        //        End With
-        //    Catch ex As Exception
-        //        MsgBox(ex.Message & "No Crystal Reports have been Installed")
-        //    End Try
-        //    con.Close()
-        //    da.Dispose()
-        //End Sub
 
 
         public DataTable DataTable(string sqlselect)

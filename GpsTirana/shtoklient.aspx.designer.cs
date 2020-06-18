@@ -21,7 +21,16 @@ namespace GpsTirana
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText emer;
+        protected global::System.Web.UI.WebControls.TextBox emer;
+
+        /// <summary>
+        /// rfvcandidate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvcandidate;
 
         /// <summary>
         /// atesia control.
@@ -42,31 +51,40 @@ namespace GpsTirana
         protected global::System.Web.UI.HtmlControls.HtmlInputText mbiemri;
 
         /// <summary>
-        /// birthday control.
+        /// idkarte control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText birthday;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idkarte;
 
         /// <summary>
-        /// gjinia control.
+        /// nuis control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton gjinia;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText nuis;
 
         /// <summary>
-        /// gjiniaa control.
+        /// gjinia1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton gjiniaa;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton gjinia1;
+
+        /// <summary>
+        /// gjinia2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton gjinia2;
 
         /// <summary>
         /// email control.
@@ -85,6 +103,15 @@ namespace GpsTirana
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText phone;
+
+        /// <summary>
+        /// adresa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText adresa;
 
         /// <summary>
         /// kontrata control.

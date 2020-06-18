@@ -154,7 +154,7 @@
                         </div>
                         <div class="p-t-15">
                             <button class="btn btn--radius-2 btn--blue" type="submit">Save</button>
-                            <button class="btn btn--radius-2 btn--blue  asdf" type="submit">Save and Send to mail</button>
+                            <button class="btn btn--radius-2 btn--blue " type="submit">Save & Send mail</button>
                         </div>
                     </form>
                 </div>
