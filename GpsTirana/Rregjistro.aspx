@@ -36,132 +36,148 @@
 </head>
 
 <body>
-    <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
-        <div class="wrapper wrapper--w680">
-            <div class="card card-4">
-                <div class="card-body">
-                    <span class="spani">
-                        <h2 class="title">Rregjistro klient dhe sherbimin e tij</h2>
-                    </span>
+    <form runat="server">
 
-                    <form>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Emer Klienti</label>
-                                    <input class="input--style-4" type="text" name="first_name">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Mbiemri i klientit</label>
-                                    <input class="input--style-4" type="text" name="last_name">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Lloji i sherbimit</label>
-                                    <input class="input--style-4" type="text" name="first_name">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Targa e Mjetit</label>
-                                    <input class="input--style-4" type="text" name="last_name">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Data e kryerjes se sherbimit</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="birthday">
-                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Vendi i instalimit </label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">
-                                            Dashboard
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">
-                                            Kofano
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">
-                                            OBD,Siguresa
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">
-                                            Bagazh
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">
-                                            Kasetofon
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">
-                                            Pasagjer, Siguresa
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
 
+        <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+            <div class="wrapper wrapper--w680">
+                <div class="card card-4">
+                    <div class="card-body">
+                        <span class="spani">
+                            <h2 class="title">Rregjistro klient dhe sherbimin e tij</h2>
+                        </span>
+
+                        <form>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Emer Klienti</label>
+                                        <input class="input--style-4" type="text" name="first_name" id="emer" runat="server">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">ID Karte</label>
+                                        <input class="input--style-4" type="text" name="last_name" id="idkarte" runat="server">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Email</label>
-                                    <input class="input--style-4" type="email" name="email">
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Shiko nese ka sherbim te meparshem -------></label>
+
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <asp:Button Text="check here " runat="server"  CssClass="btn btn--radius-2 btn--blue" OnClick="shiko_nese_ka_sherbim" />
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <label class="label">Phone Number</label>
-                                    <input class="input--style-4" type="text" name="phone">
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Lloji i sherbimit</label>
+                                        <input class="input--style-4" type="text" name="first_name">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Targa e Mjetit</label>
+                                        <input class="input--style-4" type="text" name="last_name">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="input-group">
-                            <label class="label">Lloji i sherbimit</label>
-                            <div class="rs-select2 js-select-simple select--no-search">
-                                <select name="Lloji i sherbimit">
-                                    <option disabled="disabled" selected="selected">Choose option</option>
-                                    <option>Fikje</option>
-                                    <option>Roaming</option>
-                                    <option>etj etj</option>
-                                </select>
-                                <div class="select-dropdown"></div>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Data e kryerjes se sherbimit</label>
+                                        <div class="input-group-icon">
+                                            <input class="input--style-4 js-datepicker" type="text" name="birthday">
+                                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Vendi i instalimit </label>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                Dashboard
+                                            <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Kofano
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                OBD,Siguresa
+                                            <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Bagazh
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                Kasetofon
+                                            <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Pasagjer, Siguresa
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--blue" type="submit">Save</button>
-                            <button class="btn btn--radius-2 btn--blue " type="submit">Save & Send mail</button>
-                        </div>
-                    </form>
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Email</label>
+                                        <input class="input--style-4" type="email" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Phone Number</label>
+                                        <input class="input--style-4" type="text" name="phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group">
+                                <label class="label">Lloji i sherbimit</label>
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="Lloji i sherbimit">
+                                        <option disabled="disabled" selected="selected">Choose option</option>
+                                        <option>Fikje</option>
+                                        <option>Roaming</option>
+                                        <option>etj etj</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                            <div class="p-t-15">
+                                <button class="btn btn--radius-2 btn--blue" type="submit">Save</button>
+                                <button class="btn btn--radius-2 btn--blue " type="submit">Save & Send mail</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </form>
     <!-- Jquery JS-->
     <script src="vendore/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->

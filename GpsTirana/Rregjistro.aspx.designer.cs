@@ -13,5 +13,23 @@ namespace GpsTirana
 
     public partial class Rregjistro
     {
+
+        /// <summary>
+        /// emer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText emer;
+
+        /// <summary>
+        /// idkarte control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText idkarte;
     }
 }
