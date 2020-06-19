@@ -71,38 +71,63 @@
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group">
-                                        <asp:Button Text="check here " runat="server"  CssClass="btn btn--radius-2 btn--blue" OnClick="shiko_nese_ka_sherbim" />
+                                        <asp:Button Text="check here " runat="server" CssClass="btn btn--radius-2 btn--blue" OnClick="shiko_nese_ka_sherbim" />
                                     </div>
                                 </div>
                             </div>
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group">
-                                        <label class="label">Lloji i sherbimit</label>
-                                        <input class="input--style-4" type="text" name="first_name">
+                                        <label class="label">Modeli i mjetit</label>
+                                        <input class="input--style-4" type="text" name="first_name" id="modeli" runat="server">
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group">
                                         <label class="label">Targa e Mjetit</label>
-                                        <input class="input--style-4" type="text" name="last_name">
+                                        <input class="input--style-4" type="text" name="last_name" id="targa" runat="server">
                                     </div>
                                 </div>
                             </div>
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group">
-                                        <label class="label">Data e kryerjes se sherbimit</label>
+                                        <label class="label">IMEI</label>
                                         <div class="input-group-icon">
-                                            <input class="input--style-4 js-datepicker" type="text" name="birthday">
-                                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                            <input class="input--style-4 " type="text" name="birthday" id="imei" runat="server">
+                                            <%--<i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>--%>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group">
-                                        <label class="label">Vendi i instalimit </label>
+                                        <label class="label">Paisja </label>
                                         <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                Paisja1
+                                            <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Paisja2
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                Paisja3
+                                            <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Paisja4
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <%-- <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Dashboard
                                             <input type="radio" checked="checked" name="gender">
@@ -137,28 +162,103 @@
                                             <input type="radio" name="gender">
                                                 <span class="checkmark"></span>
                                             </label>
-                                        </div>
-
+                                        </div>--%>
                                     </div>
                                 </div>
                             </div>
                             <div class="row row-space">
                                 <div class="col-2">
                                     <div class="input-group">
-                                        <label class="label">Email</label>
-                                        <input class="input--style-4" type="email" name="email">
+                                        <label class="label">Nr Teli </label>
+                                        <input class="input--style-4" type="email" name="email" id="Nr_teli" runat="server" placeholder="+355...">
                                     </div>
                                 </div>
                                 <div class="col-2">
                                     <div class="input-group">
-                                        <label class="label">Phone Number</label>
-                                        <input class="input--style-4" type="text" name="phone">
+                                        <label class="label">Lloji i sherbimit</label>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                Basic
+                                            <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Kofano
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                shitje
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                Fikje
+                                            <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Roaming
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                Karburant
+                                            <input type="radio" checked="checked" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                L.V.CAN
+                                            <input type="radio" name="gender">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <label class="label">Lloji i sherbimit</label>
-                                <div class="rs-select2 js-select-simple select--no-search">
+                                <label class="label">Vendi i instalimit</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        Dashboard
+                                            <input type="radio" checked="checked" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        Kofano
+                                            <input type="radio" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        OBD,Siguresa
+                                            <input type="radio" checked="checked" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        Bagazh
+                                            <input type="radio" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        Kasetofon
+                                            <input type="radio" checked="checked" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        Pasagjer, Siguresa
+                                            <input type="radio" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <%--  <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="Lloji i sherbimit">
                                         <option disabled="disabled" selected="selected">Choose option</option>
                                         <option>Fikje</option>
@@ -166,6 +266,49 @@
                                         <option>etj etj</option>
                                     </select>
                                     <div class="select-dropdown"></div>
+                                </div>--%>
+                            </div>
+                            <div class="input-group">
+                                <label class="label">Menyra pageses</label>
+                                <div class="p-t-10">
+                                    <label class="radio-container m-r-45">
+                                        3 muaj
+                                            <input type="radio" checked="checked" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container">
+                                        6 muaj
+                                            <input type="radio" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container m-r-45">
+                                        12 muaj
+                                            <input type="radio" checked="checked" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="radio-container m-r-45">
+                                        Cdo muaj
+                                            <input type="radio" checked="checked" name="gender">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="row row-space">
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Data e pageses</label>
+                                        <div class="input-group-icon">
+                                            <input class="input--style-4 js-datepicker" type="text" name="birthday" id="Text1" runat="server">
+                                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <div class="input-group">
+                                        <label class="label">Koment mbi punen e kryer</label>
+                                        <input class="input--style-4" type="text" name="last_name" id="Text2" runat="server">
+                                    </div>
                                 </div>
                             </div>
                             <div class="p-t-15">

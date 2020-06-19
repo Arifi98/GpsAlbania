@@ -41,18 +41,33 @@ namespace GpsTirana
                                   "alert('ky klient ka te rregjistruar  " + Convert.ToInt32(ka_sherbim) + " makina ');",
                                   true);
                     }
+                    else
+                    {
+                        ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
+                               "err_msg",
+                               "alert('ky klient nuk  ka asnje makine te rregjistruar');",
+                               true);
+                    }
 
                 }
                 else
                 {
                     ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
                                 "err_msg",
-                                "alert('ky klient nuk  ka te rregjistruar asnje  makine ');",
+                                "alert('ky klient nuk  egziston i rregjistruar ');",
                                 true);
                 }
 
 
 
+
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
+                            "err_msg",
+                            "alert('Ploteso fushat');",
+                            true);
 
             }
         }
