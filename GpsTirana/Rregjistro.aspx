@@ -10,6 +10,8 @@
     <meta name="description" content="Colorlib Templates">
     <meta name="author" content="Colorlib">
     <meta name="keywords" content="Colorlib Templates">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <%--//jquery--%>
 
     <!-- Title Page-->
     <title>GPS Albania</title>
@@ -44,7 +46,7 @@
                 <div class="card card-4">
                     <div class="card-body">
                         <span class="spani">
-                            <h2 class="title">Rregjistro klient dhe sherbimin e tij</h2>
+                            <h2 class="title">Rregjistro nje  sherbim</h2>
                         </span>
 
                         <form>
@@ -105,12 +107,12 @@
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Paisja1
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" name="p" id="paisje1" runat="server">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 Paisja2
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="p" id="paisje2" runat="server">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -118,12 +120,12 @@
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Paisja3
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" name="p" id="paisje3" runat="server">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 Paisja4
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="p" runat="server" id="paisje4">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -170,7 +172,7 @@
                                 <div class="col-2">
                                     <div class="input-group">
                                         <label class="label">Nr Teli </label>
-                                        <input class="input--style-4" type="email" name="email" id="Nr_teli" runat="server" placeholder="+355...">
+                                        <input class="input--style-4" type="text" name="email" id="Nr_teli" runat="server" placeholder="06...">
                                     </div>
                                 </div>
                                 <div class="col-2">
@@ -179,41 +181,41 @@
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Basic
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" name="ab" id="basic" runat="server" value="Basic">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 Kofano
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="b" id="kofani" runat="server" value="Kofano">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 shitje
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="c" id="shitje" runat="server" value="shitje">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Fikje
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" name="d" id="fikje" runat="server" value="Fikje">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 Roaming
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="e" id="Roaming" runat="server" value="Roaming">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Karburant
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" name="f" id="karburant" runat="server" value="Karburant">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 L.V.CAN
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="g" id="LVCAN" runat="server" value="L.V.CAN">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -225,36 +227,36 @@
                                 <div class="p-t-10">
                                     <label class="radio-container m-r-45">
                                         Dashboard
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio"  name="gender" id="Dashboard" runat="server">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
                                         Kofano
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="gender" id="Kofano" runat="server">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
                                 <div class="p-t-10">
                                     <label class="radio-container m-r-45">
                                         OBD,Siguresa
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" id="ObdSiguresa" runat="server" name="gender" value="OBD,Siguresa">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
                                         Bagazh
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="gender" id="Bagazh" runat="server">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
                                 <div class="p-t-10">
                                     <label class="radio-container m-r-45">
                                         Kasetofon
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" id="Kasetofon" runat="server" name="gender">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
                                         Pasagjer, Siguresa
-                                            <input type="radio" name="gender">
+                                            <input type="radio" id="PasagjerSiguresa" runat="server" name="gender" value=" Pasagjer,Siguresa">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -273,22 +275,22 @@
                                 <div class="p-t-10">
                                     <label class="radio-container m-r-45">
                                         3 muaj
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" id="tremuaj" runat="server" name="t" value="3 muaj">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
                                         6 muaj
-                                            <input type="radio" name="gender">
+                                            <input type="radio" id="gjashtemuaj" runat="server" name="t" value="6 muaj">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container m-r-45">
                                         12 muaj
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" id="muaj" runat="server" name="t" value="12 muaj">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container m-r-45">
                                         Cdo muaj
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" id="Muajii" runat="server" name="t" value="cdo muaj">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
@@ -312,8 +314,8 @@
                                 </div>
                             </div>
                             <div class="p-t-15">
-                                <button class="btn btn--radius-2 btn--blue" type="submit">Save</button>
-                                <button class="btn btn--radius-2 btn--blue " type="submit">Save & Send mail</button>
+                                <button class="btn btn--radius-2 btn--blue" type="submit" runat="server" onserverclick="save">Save</button>
+                                <button class="btn btn--radius-2 btn--blue " type="submit" runat="server" onserverclick="saveemail">Save & Send mail</button>
                             </div>
                         </form>
                     </div>
@@ -321,6 +323,80 @@
             </div>
         </div>
     </form>
+
+    <script type="text/javascript">
+        $(document).on("click", "input[name='ab']", function () {
+            thisRadio = $(this);
+            if (thisRadio.hasClass("imChecked")) {
+                thisRadio.removeClass("imChecked");
+                thisRadio.prop('checked', false);
+            } else {
+                thisRadio.prop('checked', true);
+                thisRadio.addClass("imChecked");
+            };
+        })
+        $(document).on("click", "input[name='b']", function () {
+            thisRadio = $(this);
+            if (thisRadio.hasClass("imChecked")) {
+                thisRadio.removeClass("imChecked");
+                thisRadio.prop('checked', false);
+            } else {
+                thisRadio.prop('checked', true);
+                thisRadio.addClass("imChecked");
+            };
+        })
+        $(document).on("click", "input[name='c']", function () {
+            thisRadio = $(this);
+            if (thisRadio.hasClass("imChecked")) {
+                thisRadio.removeClass("imChecked");
+                thisRadio.prop('checked', false);
+            } else {
+                thisRadio.prop('checked', true);
+                thisRadio.addClass("imChecked");
+            };
+        })
+        $(document).on("click", "input[name='d']", function () {
+            thisRadio = $(this);
+            if (thisRadio.hasClass("imChecked")) {
+                thisRadio.removeClass("imChecked");
+                thisRadio.prop('checked', false);
+            } else {
+                thisRadio.prop('checked', true);
+                thisRadio.addClass("imChecked");
+            };
+        })
+        $(document).on("click", "input[name='e']", function () {
+            thisRadio = $(this);
+            if (thisRadio.hasClass("imChecked")) {
+                thisRadio.removeClass("imChecked");
+                thisRadio.prop('checked', false);
+            } else {
+                thisRadio.prop('checked', true);
+                thisRadio.addClass("imChecked");
+            };
+        })
+        $(document).on("click", "input[name='f']", function () {
+            thisRadio = $(this);
+            if (thisRadio.hasClass("imChecked")) {
+                thisRadio.removeClass("imChecked");
+                thisRadio.prop('checked', false);
+            } else {
+                thisRadio.prop('checked', true);
+                thisRadio.addClass("imChecked");
+            };
+        })
+        $(document).on("click", "input[name='g']", function () {
+            thisRadio = $(this);
+            if (thisRadio.hasClass("imChecked")) {
+                thisRadio.removeClass("imChecked");
+                thisRadio.prop('checked', false);
+            } else {
+                thisRadio.prop('checked', true);
+                thisRadio.addClass("imChecked");
+            };
+        })
+
+    </script>
     <!-- Jquery JS-->
     <script src="vendore/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
