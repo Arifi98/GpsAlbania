@@ -173,6 +173,8 @@
     <Content Include="log_in\vendor\select2\select2.js" />
     <Content Include="log_in\vendor\select2\select2.min.css" />
     <Content Include="log_in\vendor\select2\select2.min.js" />
+    <Content Include="modifikime.aspx" />
+    <Content Include="raporte.aspx" />
     <Content Include="Rregjistro.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -411,6 +413,7 @@
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="zevendsimPaisje.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin.aspx.cs">
@@ -469,7 +472,21 @@
     <Compile Include="kot.aspx.designer.cs">
       <DependentUpon>kot.aspx</DependentUpon>
     </Compile>
+    <Compile Include="modifikime.aspx.cs">
+      <DependentUpon>modifikime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="modifikime.aspx.designer.cs">
+      <DependentUpon>modifikime.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="raporte.aspx.cs">
+      <DependentUpon>raporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="raporte.aspx.designer.cs">
+      <DependentUpon>raporte.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Rregjistro.aspx.cs">
       <DependentUpon>Rregjistro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -514,6 +531,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="zevendsimPaisje.aspx.cs">
+      <DependentUpon>zevendsimPaisje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zevendsimPaisje.aspx.designer.cs">
+      <DependentUpon>zevendsimPaisje.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -126,23 +126,46 @@ namespace GpsTirana
                     if (Convert.ToInt32(gjendet) != 0)
                     {
                         sqlConfig.strcon.Open();
-                        string insert_sherbim = "insert into instalim values(" + gjendet + ",'" + targa.Value + "','" + modeli.Value + "','" + paisja + "','" + imei.Value + "','+355 " + Nr_teli.Value + "','" + sherbimi + "','" + vendiInstalimit + "','" + pagesa + "','" + Text2.Value + "','" + Convert.ToString(DateTime.Now) + "','" + Text1.Value + "' )";
-                        SqlCommand cmdd = new SqlCommand(insert_sherbim, sqlConfig.strcon);
-                        var ka_sherbim = cmdd.ExecuteNonQuery();
 
-                        var client = new SmtpClient("smtp.gmail.com", 587)
+                        string targa_unike = "  select count(id) from instalim where targa like '" + targa.Value + "'";
+                        SqlCommand cmddr = new SqlCommand(targa_unike, sqlConfig.strcon);
+
+                        if (Convert.ToInt32(cmddr.ExecuteScalar()) != 0)
                         {
-                            Credentials = new NetworkCredential("rifi9898@gmail.com", "Rifi98@@$"),
-                            EnableSsl = true
-                        };
-                        client.Send("rifi9898@gmail.com", "arif.bucpapaj98@gmail.com", "GpsAlbania", "Klientit me emer :" + emer.Value + " mori sherbim ne mjetin me targe: " + targa.Value.ToUpper() + " ");
+                            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
+                                     "err_msg",
+                                     "alert('kjo targe ekziston e rregjistruar me pare!');",
+                                     true);
+                        }
+                        else
+                        {
+                            //sqlConfig.strcon.Open();
+                            string insert_sherbim = "insert into instalim values(" + gjendet + ",'" + targa.Value + "','" + modeli.Value + "','" + paisja + "','" + imei.Value + "','+355 " + Nr_teli.Value + "','" + sherbimi + "','" + vendiInstalimit + "','" + pagesa + "','" + Text2.Value + "','" + Convert.ToString(DateTime.Now) + "','" + Text1.Value + "' )";
+                            SqlCommand cmdd = new SqlCommand(insert_sherbim, sqlConfig.strcon);
+                            var ka_sherbim = cmdd.ExecuteNonQuery();
+                           
 
 
+                            var client = new SmtpClient("smtp.gmail.com", 587)
+                            {
+                                Credentials = new NetworkCredential("rifi9898@gmail.com", "Rifi98@@$"),
+                                EnableSsl = true
+                            };
+                            client.Send("rifi9898@gmail.com", "arif.bucpapaj98@gmail.com", "GpsAlbania", "Klientit me emer :" + emer.Value + " mori sherbim ne mjetin me targe: " + targa.Value.ToUpper() + " ");
 
-                        ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
-                                  "err_msg",
-                                  "alert('ky sherbim i shtua me sukses tek " + emer.Value.ToUpper() + " dhe u dergua ne email');",
-                                  true);
+
+                            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
+                                                           "err_msg",
+                                                           "alert('ky sherbim i shtua me sukses tek klienti me emer" + emer.Value.ToUpper() + " dhe u dergua ne email');",
+                                                           true);
+
+
+                        }
+                        sqlConfig.strcon.Close();
+
+                       
+
+                     
 
 
 
@@ -424,18 +447,34 @@ namespace GpsTirana
                     if (Convert.ToInt32(gjendet) != 0)
                     {
                         sqlConfig.strcon.Open();
-                        string insert_sherbim = "insert into instalim values(" + gjendet + ",'" + targa.Value + "','" + modeli.Value + "','" + paisja + "','" + imei.Value + "','+355 " + Nr_teli.Value + "','" + sherbimi + "','" + vendiInstalimit + "','" + pagesa + "','" + Text2.Value + "','" + Convert.ToString(DateTime.Now) + "','" + Text1.Value + "' )";
-                        SqlCommand cmdd = new SqlCommand(insert_sherbim, sqlConfig.strcon);
-                        var ka_sherbim = cmdd.ExecuteNonQuery();
+
+                        string targa_unike = "  select count(id) from instalim where targa like '" + targa.Value + "'";
+                        SqlCommand cmddr = new SqlCommand(targa_unike, sqlConfig.strcon);
+                       
+                        if (Convert.ToInt32(cmddr.ExecuteScalar()) != 0)
+                        { 
+                            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
+                                     "err_msg",
+                                     "alert('kjo targe ekziston e rregjistruar me pare!');",
+                                     true);
+                        }
+                        else
+                        {
+                            //sqlConfig.strcon.Open();
+                            string insert_sherbim = "insert into instalim values(" + gjendet + ",'" + targa.Value + "','" + modeli.Value + "','" + paisja + "','" + imei.Value + "','+355 " + Nr_teli.Value + "','" + sherbimi + "','" + vendiInstalimit + "','" + pagesa + "','" + Text2.Value + "','" + Convert.ToString(DateTime.Now) + "','" + Text1.Value + "' )";
+                            SqlCommand cmdd = new SqlCommand(insert_sherbim, sqlConfig.strcon);
+                            var ka_sherbim = cmdd.ExecuteNonQuery();
+                            sqlConfig.strcon.Close();
+
+                            ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
+                                      "err_msg",
+                                      "alert('ky sherbim i shtua me sukses tek klienti me emer " + emer.Value.ToUpper() + "');",
+                                      true);
 
 
-                        ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
-                                  "err_msg",
-                                  "alert('ky sherbim i shtua me sukses tek " + emer.Value.ToUpper() + "');",
-                                  true);
-
-
-                        result = true;
+                            result = true;
+                        }
+                        sqlConfig.strcon.Close();
                     }
                     else
                     {
@@ -454,7 +493,7 @@ namespace GpsTirana
                                   true);
                 }
                 return result;
-
+               
             }
             catch (Exception ex)
             {
@@ -464,13 +503,7 @@ namespace GpsTirana
 
         }
 
-        //public int ktheidklienti()
-        //{
-        //    sqlConfig sqlConfig = new sqlConfig();
-        //    sqlConfig.strcon.Open();
-        //    string query = "select idKlienti from client where emer = '" + emer.Value + "' and IdKarte ='" + idkarte.Value + "'";
-        //    SqlCommand cmd = new SqlCommand(query, sqlConfig.strcon);
-        //}
+      
 
     }
 }
