@@ -106,65 +106,73 @@
                                         <label class="label">Paisja </label>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
-                                                Paisja1
-                                            <input type="radio" name="p" id="paisje1" runat="server">
+                                                Fmb 920
+                                            <input type="radio" name="p" id="paisje1" runat="server" value=" Fmb 920">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
-                                                Paisja2
-                                            <input type="radio" name="p" id="paisje2" runat="server">
+                                                Fmb 120
+                                            <input type="radio" name="p" id="paisje2" runat="server" value=" Fmb 120">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
 
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
-                                                Paisja3
-                                            <input type="radio" name="p" id="paisje3" runat="server">
+                                                Fma 120
+                                            <input type="radio" name="p" id="paisje3" runat="server" value="Fma 120">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
-                                                Paisja4
-                                            <input type="radio" name="p" runat="server" id="paisje4">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <%-- <div class="p-t-10">
-                                            <label class="radio-container m-r-45">
-                                                Dashboard
-                                            <input type="radio" checked="checked" name="gender">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <label class="radio-container">
-                                                Kofano
-                                            <input type="radio" name="gender">
+                                                Fm 1100
+                                            <input type="radio" name="p" runat="server" id="paisje4" value=" Fm 1100">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
-                                                OBD,Siguresa
-                                            <input type="radio" checked="checked" name="gender">
+                                                Fm 1202
+                                            <input type="radio" name="p" id="paisje33" runat="server" value=" Fm 1202">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
-                                                Bagazh
-                                            <input type="radio" name="gender">
+                                                Tmt 250
+                                            <input type="radio" name="p" runat="server" id="paisje44" value=" Tmt 250">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
-                                                Kasetofon
-                                            <input type="radio" checked="checked" name="gender">
+                                                Fmb 140
+                                            <input type="radio" name="p" id="Radio1" runat="server" value="Fmb 140">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
-                                                Pasagjer, Siguresa
-                                            <input type="radio" name="gender">
+                                                LV-CAN 200
+                                            <input type="radio" name="p" runat="server" id="Radio2" value="LV-CAN 200">
                                                 <span class="checkmark"></span>
                                             </label>
-                                        </div>--%>
+                                        </div>
+                                        <div class="p-t-10">
+                                            <label class="radio-container m-r-45">
+                                                Fmb 001
+                                            <input type="radio" name="p" id="Radio3" runat="server" value="Fmb 001">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Fmb 002
+                                            <input type="radio" name="p" runat="server" id="Radio4" value=" Fmb 002">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <label class="radio-container">
+                                                Fmb 003
+                                            <input type="radio" name="p" runat="server" id="Radio44" value="Fmb 003">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+
+
+
                                     </div>
                                 </div>
                             </div>
@@ -227,7 +235,7 @@
                                 <div class="p-t-10">
                                     <label class="radio-container m-r-45">
                                         Dashboard
-                                            <input type="radio"  name="gender" id="Dashboard" runat="server">
+                                            <input type="radio" name="gender" id="Dashboard" runat="server">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">
