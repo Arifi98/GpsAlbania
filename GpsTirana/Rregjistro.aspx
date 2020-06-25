@@ -125,48 +125,48 @@
                                             </label>
                                             <label class="radio-container">
                                                 Fm 1100
-                                            <input type="radio" name="p" runat="server" id="paisje4" value=" Fm 1100">
+                                            <input type="radio" name="p" runat="server" id="paisje4" value="Fm 1100">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Fm 1202
-                                            <input type="radio" name="p" id="paisje33" runat="server" value=" Fm 1202">
+                                            <input type="radio" name="p" id="paisje5" runat="server" value="Fm 1202">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 Tmt 250
-                                            <input type="radio" name="p" runat="server" id="paisje44" value=" Tmt 250">
+                                            <input type="radio" name="p" runat="server" id="paisje6" value="Tmt 250">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Fmb 140
-                                            <input type="radio" name="p" id="Radio1" runat="server" value="Fmb 140">
+                                            <input type="radio" name="p" id="paisje7" runat="server" value="Fmb 140">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 LV-CAN 200
-                                            <input type="radio" name="p" runat="server" id="Radio2" value="LV-CAN 200">
+                                            <input type="radio" name="p" runat="server" id="paisje8" value="LV-CAN 200">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
                                         <div class="p-t-10">
                                             <label class="radio-container m-r-45">
                                                 Fmb 001
-                                            <input type="radio" name="p" id="Radio3" runat="server" value="Fmb 001">
+                                            <input type="radio" name="p" id="paisje9" runat="server" value="Fmb 001">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 Fmb 002
-                                            <input type="radio" name="p" runat="server" id="Radio4" value=" Fmb 002">
+                                            <input type="radio" name="p" runat="server" id="paisje10" value=" Fmb 002">
                                                 <span class="checkmark"></span>
                                             </label>
                                             <label class="radio-container">
                                                 Fmb 003
-                                            <input type="radio" name="p" runat="server" id="Radio44" value="Fmb 003">
+                                            <input type="radio" name="p" runat="server" id="paisje11" value="Fmb 003">
                                                 <span class="checkmark"></span>
                                             </label>
                                         </div>
@@ -264,7 +264,7 @@
                                     </label>
                                     <label class="radio-container">
                                         Pasagjer, Siguresa
-                                            <input type="radio" id="PasagjerSiguresa" runat="server" name="gender" value=" Pasagjer,Siguresa">
+                                            <input type="radio" id="PasagjerSiguresa" runat="server" name="gender" value="Pasagjer,Siguresa">
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>

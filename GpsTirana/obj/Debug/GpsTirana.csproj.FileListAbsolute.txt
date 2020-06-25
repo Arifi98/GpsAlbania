@@ -138,3 +138,5 @@ C:\Users\abucpapaj\Desktop\GPS\GpsTirana\GpsAlbania.git\GpsTirana\obj\Debug\GpsT
 C:\Users\abucpapaj\Desktop\GPS\GpsTirana\GpsAlbania.git\GpsTirana\obj\Debug\GpsTirana.dll
 C:\Users\abucpapaj\Desktop\GPS\GpsTirana\GpsAlbania.git\GpsTirana\obj\Debug\GpsTirana.pdb
 C:\Users\abucpapaj\Desktop\GPS\GpsTirana\GpsAlbania.git\GpsTirana\obj\Debug\GpsTirana.csprojAssemblyReference.cache
+C:\Users\abucpapaj\Desktop\GPS\GpsTirana\GpsAlbania.git\GpsTirana\bin\itextsharp.dll
+C:\Users\abucpapaj\Desktop\GPS\GpsTirana\GpsAlbania.git\GpsTirana\bin\itextsharp.xml

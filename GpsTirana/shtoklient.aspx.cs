@@ -18,6 +18,10 @@ namespace GpsTirana
 
         protected void save(object sender, EventArgs e)
         {
+            //raport raporte = new raport();
+            //raporte.Totali_me_Roaming_klient("arif");
+
+
             string gjinia = kthe_gjini();
             if (!string.IsNullOrEmpty(emer.Text)&& !string.IsNullOrEmpty(gjinia)&& !string.IsNullOrEmpty(idkarte.Value) && !string.IsNullOrEmpty(gjinia)
                && !string.IsNullOrEmpty(atesia.Value)&& !string.IsNullOrEmpty(email.Value)&& !string.IsNullOrEmpty(phone.Value)&& !string.IsNullOrEmpty(adresa.Value)&& !string.IsNullOrEmpty(kontrata.Value))
@@ -51,7 +55,7 @@ namespace GpsTirana
             string query = "select Count(IdKarte) from client where IdKarte like '" + id + "' ";
 
             SqlCommand cmd = new SqlCommand(query, sqlConfig.strcon);
-            string gjejTarge = "select t.targa , e.emer from client e inner join instalim t on e.idKlienti = t.id_klienti where e.IdKarte like '" + id + "'";
+            string gjejTarge = "select t.targa , e.emer from client e inner join instalim t on e.id = t.id_klienti where e.IdKarte like '" + id + "'";
             sqlConfig.Single_Select(gjejTarge);
             sqlConfig.strcon.Open();
             var gjendet = cmd.ExecuteScalar();

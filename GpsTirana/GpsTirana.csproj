@@ -52,6 +52,9 @@
     <Reference Include="AspNet.ScriptManager.jQuery, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.5.0\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -122,6 +125,7 @@
     <Content Include="Content\sweetalert\thumbs-up.jpg" />
     <Content Include="Dashboard.aspx" />
     <Content Include="dashboardd.aspx" />
+    <Content Include="dataReminder.aspx" />
     <Content Include="EditKlient.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -175,6 +179,7 @@
     <Content Include="log_in\vendor\select2\select2.min.js" />
     <Content Include="modifikime.aspx" />
     <Content Include="raporte.aspx" />
+    <Content Include="remindeer.aspx" />
     <Content Include="Rregjistro.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -447,6 +452,13 @@
     <Compile Include="dashboardd.aspx.designer.cs">
       <DependentUpon>dashboardd.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dataReminder.aspx.cs">
+      <DependentUpon>dataReminder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dataReminder.aspx.designer.cs">
+      <DependentUpon>dataReminder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="datatable.cs" />
     <Compile Include="EditKlient.aspx.cs">
       <DependentUpon>EditKlient.aspx</DependentUpon>
@@ -480,12 +492,20 @@
       <DependentUpon>modifikime.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="raport.cs" />
     <Compile Include="raporte.aspx.cs">
       <DependentUpon>raporte.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="raporte.aspx.designer.cs">
       <DependentUpon>raporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="remindeer.aspx.cs">
+      <DependentUpon>remindeer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="remindeer.aspx.designer.cs">
+      <DependentUpon>remindeer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Rregjistro.aspx.cs">
       <DependentUpon>Rregjistro.aspx</DependentUpon>

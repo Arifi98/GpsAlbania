@@ -31,14 +31,14 @@ namespace GpsTirana
             {
 
                 sqlConfig.strcon.Open();
-                string query = "select idKlienti from client where emer = '" + emer.Value + "' and IdKarte ='" + idkarte.Value + "'";
+                string query = "select id from client where emer = '" + emer.Value + "' and IdKarte ='" + idkarte.Value + "'";
                 SqlCommand cmd = new SqlCommand(query, sqlConfig.strcon);
                 var gjendet = cmd.ExecuteScalar();
                 sqlConfig.strcon.Close();
                 if (Convert.ToInt32(gjendet) != 0)
                 {
                     sqlConfig.strcon.Open();
-                    string kthe_sa_makina_ka_klienti = "select count(*) from client e inner join instalim t on e.idKlienti = t.id_klienti where e.IdKarte like '" + idkarte.Value + "'";
+                    string kthe_sa_makina_ka_klienti = "select count(*) from client e inner join instalim t on e.id = t.id_klienti where e.IdKarte like '" + idkarte.Value + "'";
                     SqlCommand cmdd = new SqlCommand(kthe_sa_makina_ka_klienti, sqlConfig.strcon);
                     var ka_sherbim = cmdd.ExecuteScalar();
 
@@ -119,7 +119,7 @@ namespace GpsTirana
                 {
 
                     sqlConfig.strcon.Open();
-                    string query = "select idKlienti from client where emer = '" + emer.Value + "' and IdKarte ='" + idkarte.Value + "'";
+                    string query = "select id from client where emer = '" + emer.Value + "' and IdKarte ='" + idkarte.Value + "'";
                     SqlCommand cmd = new SqlCommand(query, sqlConfig.strcon);
                     var gjendet = cmd.ExecuteScalar();
                     sqlConfig.strcon.Close();
@@ -143,7 +143,7 @@ namespace GpsTirana
                             string insert_sherbim = "insert into instalim values(" + gjendet + ",'" + targa.Value + "','" + modeli.Value + "','" + paisja + "','" + imei.Value + "','+355 " + Nr_teli.Value + "','" + sherbimi + "','" + vendiInstalimit + "','" + pagesa + "','" + Text2.Value + "','" + Convert.ToString(DateTime.Now) + "','" + Text1.Value + "' )";
                             SqlCommand cmdd = new SqlCommand(insert_sherbim, sqlConfig.strcon);
                             var ka_sherbim = cmdd.ExecuteNonQuery();
-                           
+
 
 
                             var client = new SmtpClient("smtp.gmail.com", 587)
@@ -163,9 +163,9 @@ namespace GpsTirana
                         }
                         sqlConfig.strcon.Close();
 
-                       
 
-                     
+
+
 
 
 
@@ -234,6 +234,49 @@ namespace GpsTirana
                 mystring = paisje4.Value;
 
             }
+            if (paisje5.Checked == true)
+            {
+
+                mystring = paisje5.Value;
+
+            }
+            if (paisje6.Checked == true)
+            {
+
+                mystring = paisje6.Value;
+
+            }
+            if (paisje7.Checked == true)
+            {
+
+                mystring = paisje7.Value;
+
+            }
+            if (paisje8.Checked == true)
+            {
+
+                mystring = paisje8.Value;
+
+            }
+            if (paisje9.Checked == true)
+            {
+
+                mystring = paisje9.Value;
+
+            }
+            if (paisje10.Checked == true)
+            {
+
+                mystring = paisje10.Value;
+
+            }
+            if (paisje11.Checked == true)
+            {
+
+                mystring = paisje11.Value;
+
+            }
+
 
             return mystring;
 
@@ -440,7 +483,7 @@ namespace GpsTirana
                 {
 
                     sqlConfig.strcon.Open();
-                    string query = "select idKlienti from client where emer = '" + emer.Value + "' and IdKarte ='" + idkarte.Value + "'";
+                    string query = "select id from client where emer = '" + emer.Value + "' and IdKarte ='" + idkarte.Value + "'";
                     SqlCommand cmd = new SqlCommand(query, sqlConfig.strcon);
                     var gjendet = cmd.ExecuteScalar();
                     sqlConfig.strcon.Close();
@@ -450,9 +493,9 @@ namespace GpsTirana
 
                         string targa_unike = "  select count(id) from instalim where targa like '" + targa.Value + "'";
                         SqlCommand cmddr = new SqlCommand(targa_unike, sqlConfig.strcon);
-                       
+
                         if (Convert.ToInt32(cmddr.ExecuteScalar()) != 0)
-                        { 
+                        {
                             ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(),
                                      "err_msg",
                                      "alert('kjo targe ekziston e rregjistruar me pare!');",
@@ -493,7 +536,7 @@ namespace GpsTirana
                                   true);
                 }
                 return result;
-               
+
             }
             catch (Exception ex)
             {
@@ -503,7 +546,7 @@ namespace GpsTirana
 
         }
 
-      
+
 
     }
 }

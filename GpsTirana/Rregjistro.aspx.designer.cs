@@ -96,67 +96,67 @@ namespace GpsTirana
         protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje4;
 
         /// <summary>
-        /// paisje33 control.
+        /// paisje5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje33;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje5;
 
         /// <summary>
-        /// paisje44 control.
+        /// paisje6 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje44;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje6;
 
         /// <summary>
-        /// Radio1 control.
+        /// paisje7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje7;
 
         /// <summary>
-        /// Radio2 control.
+        /// paisje8 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio2;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje8;
 
         /// <summary>
-        /// Radio3 control.
+        /// paisje9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje9;
 
         /// <summary>
-        /// Radio4 control.
+        /// paisje10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio4;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje10;
 
         /// <summary>
-        /// Radio44 control.
+        /// paisje11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton Radio44;
+        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton paisje11;
 
         /// <summary>
         /// Nr_teli control.
